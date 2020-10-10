@@ -5,7 +5,7 @@ This is a repo for the Getting and Cleaning Data Week 4 Project on Coursera.
 The repo contains everything needed for the assignment:
 	 R code, a codebook, and a tidy data set.  
 
-##Files in the Repo:
+Files in the Repo:
 Codebook.md describes how to use everything in the repo. It also descibes the
 data, variables, and transformations to clean the data.
 
