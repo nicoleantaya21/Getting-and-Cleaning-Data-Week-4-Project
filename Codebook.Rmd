@@ -1,0 +1,42 @@
+# This is the Codebook for Getting and Cleaning Data final project 
+
+## How to get tidyData.txt: 
+	1. Download the data (from the link below), and unzip it into the R working directory 
+		https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+	2. Run the R script (run_analysis.R)
+
+## About source data
+	The source data is an experiment run on a group of 30 volunteers called "Human Activity
+	Recognition Using Smartphones Dataset". These volunteers did six movements with a smartphone
+	(Samsung Galaxy S II) on their waists measuring acceleration and velocity in 3 Dimensional space. 
+	A full desciption is available where the data was obtained: 
+	http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+
+## About the R script 
+	The file with the R code (run_analysis.R) performs the following steps: 
+	(Assuming the data is in the same folder, with unaltered names.)
+	(Also assumes current R packages like plyr and dplyr.)
+	0. Reading in files and assigning variables (not on the assignment list).
+		0.1. Load plyr, download and unzip the dataset.
+		0.2. Reading testing tables.
+		0.3. Reading trainings tables.
+		0.4. Reading feature vector.
+		0.5. Reading activity labels.
+		0.6. Assigning variable names.
+	1. Merging the training and test data sets to create one data set. 
+	2. Extracting the measurements on the mean and standard deviation for each measurement.
+		2.1. Reading the variable names.
+		2.2. Creating a vector for defining mean, standard deviation and ID. 
+		2.3. Creating a subset from the merged data set.
+	3. Descriptive activity names to name the activities in the data set. 
+	4. Labelling the data set with descriptive variable names.
+	5. Creating a second, tidy data set with the average of each variable for each activity and subject.
+		5.1. Creating the second data set. 
+		5.2. Making that data set a txt file.
+
+## About the variables
+	The following variables contain the data from the downloaded files: 
+		'x_train', 'y_train', 'x_test', 'y_test', 'subject_train', 'subject_test'
+	The following variables merge the previous data sets to further analysis: 
+		'x_data', 'y_data', 'subject_data'
+	The 'features' variable contains the correct names for the 'x_data' dataset
